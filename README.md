@@ -4,37 +4,35 @@
 
 VakeelAI is a **Legal Assistant** that helps users with questions related to **Indian Laws**. It leverages **Google Gemini**, **Tavily Search API**, and **Langchain** to provide accurate answers. The system uses a combination of **PDF-based question answering**, **web search** from Tavily, and **advanced AI models** for better accuracy. 📜💡
 
-## Tech Stack 💻
+## 🧰 Tech Stack
 
-### Frontend 🌐
-- **React.js**: JavaScript library for building user interfaces, mainly responsible for rendering the UI components and handling user interactions. ⚙️
-- **Next.js**: React framework that enables server-side rendering, static site generation, and building APIs in the same project. 🚀
+### 🖥️ Frontend
+- **[Streamlit](https://streamlit.io/)** ⚡  
+  - Python-based framework for building interactive web apps.  
+  - Handles file upload, search input, and displaying search results.  
+  - No need for additional JavaScript frameworks.
 
-### Backend 🔧
-- **Python**: Used for handling backend operations like document processing, integrating the Google Gemini API, and managing search queries. 🐍
-- **Langchain**: A framework for developing applications powered by LLMs (Large Language Models), used to manage question-answering chains. 🧠
-- **Tavily API**: A search engine for fetching online data to provide real-time answers when document-based data is insufficient. 🌐
+### 🧠 Backend
+- **Python** 🐍  
+  - Core language for document processing, text chunking, vectorization, and search indexing.
 
-### Libraries/Frameworks 📚:
-- **PyPDF2**: Python library used for reading PDF files and extracting their text. 📄
-- **FAISS**: A library for efficient similarity search and clustering of dense vectors, used for storing and querying embedded document texts. 🔍
-- **Google Generative AI**: The Google Cloud platform's generative AI services to create human-like responses. 🤖
+### 📚 Libraries & Frameworks
 
----
+| Purpose                     | Technology / Library                          | Role                                                        |
+|-----------------------------|-----------------------------------------------|-------------------------------------------------------------|
+| File handling               | `os` *(Python Standard Library)*              | Read files, manage directories                              |
+| PDF text extraction         | [PyPDF2](https://pypi.org/project/PyPDF2/)    | Read and extract text from PDF files                         |
+| Text processing & chunking  | Python logic                                  | Break text into overlapping chunks for better retrieval      |
+| Vectorization               | [scikit-learn](https://scikit-learn.org/)     | Convert text chunks into numerical vectors (TF-IDF)          |
+| Model & data saving         | [joblib](https://joblib.readthedocs.io/), [SciPy](https://scipy.org/) | Save vectorizer and vector matrices efficiently |
+| Index building concept      | Information Retrieval                         | Enable fast and accurate text search & retrieval             |
 
-## Project Structure 🏗️
 
-### Frontend (`/frontend`) ⚙️
-
-- **React.js** handles UI elements like input fields, buttons, and display of legal responses. 📝
-- **Next.js** is used for server-side rendering and static page generation, optimizing SEO and providing dynamic routes for various parts of the application. 🌐
-
-### Backend (`/Model`) 🔙
-
-- Python scripts process **PDFs**, handle **Tavily Search API calls**, and run **Google Gemini** to generate legal responses. 📜
-- **Langchain** and **FAISS** are used to manage the document text and vector embeddings for better information retrieval. 🔍
-
----
+### ✅ Why This Stack
+- Lightweight and fast — no external AI frameworks required  
+- Fully Python-based → easy to maintain and extend  
+- Ideal for search-based document applications  
+- Simple deployment with Streamlit 🚀
 
 ## Features 🌟
 
